@@ -1,0 +1,90 @@
+:root {
+  --primary-color: #006ae4;
+  --secondary-color: #005dc7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+.main-to-forms {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p-up-forms {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 300px;
+  padding: 15px;
+  font-size: 12pt;
+  border: 2px solid #d3d3d3;
+  border-radius: 15px;
+  margin: 5px;
+  outline: none;
+  transition: all .3s;
+}
+
+input:focus {
+  border: 2px solid var(--primary-color);
+}
+
+select {
+  width: 300px;
+  padding: 15px;
+  font-size: 12pt;
+  border: 2px solid #d3d3d3;
+  border-radius: 15px;
+  margin: 5px;
+  outline: none;
+  transition: all .3s;
+}
+
+select:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.button {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+}
+
+.button:focus {
+  border: none;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+}
+
+.p-sub-form {
+  margin-top: 15px;
+}

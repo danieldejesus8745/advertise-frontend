@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advertise | Cadastro</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+
+    <main class="main-to-forms">
+      <h1>Cadastre-se</h1>
+      <p class="p-up-forms">É simples e rápido</p>
+
+      <form id="form">
+        <input type="text" id="name" placeholder="Nome" autocomplete="off" required />
+        <input type="email" id="email" placeholder="E-mail" autocomplete="off" required />
+        <input type="password" id="password" placeholder="Senha" autocomplete="off" required />
+        <select id="state">
+          <option value="select">Selecione seu estado</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espirito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+        <select id="city" disabled>
+          <option value="select">Selecione uma cidade</option>
+        </select>
+        <input type="submit" class="button" value="Cadastrar" />
+      </form>
+
+      <p class="p-sub-form">Já tem conta? <a href="#">Clique aqui</a></p>
+    </main>
+
+    <script src="index.js"></script>
+
+  </body>
+</html>
