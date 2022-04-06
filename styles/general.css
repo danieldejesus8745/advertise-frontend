@@ -87,4 +87,6 @@ select:focus {
 
 .p-sub-form {
   margin-top: 15px;
+  width: 300px;
+  text-align: center;
 }
