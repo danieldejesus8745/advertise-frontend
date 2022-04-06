@@ -89,4 +89,5 @@ select:focus {
   margin-top: 15px;
   width: 300px;
   text-align: center;
+  line-height: 1.5;
 }

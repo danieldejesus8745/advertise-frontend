@@ -11,23 +11,50 @@ form.addEventListener('submit', e => {
 });
 
 const validateLoginData = loginData => {
-  if (loginData.email !== undefined && loginData.email !== "") {
-    if (loginData.email !== undefined && loginData.email !== "") {
-      //
-    } else {
-      alert('Oops! Parece que tem um probleminha com o campo Senha, confere aí pra gente');
-    }
+  if (validateField(loginData.email) && validateField(loginData.password)) {
+    sendloginData(loginData);
   } else {
-    alert('Oops! Parece que tem um probleminha com o campo E-mail, confere aí pra gente');
+    alert('Oops! Parece que um dos campos não foi preenchido corretamente, confere aí pra gente');
   }
 }
 
+const validateField = field => {
+  if (field.trim() !== "") {
+    return true;
+  }
+
+  return false;
+}
+
 const sendloginData = loginData => {
-  const url = 'http://localhost:8080/api/v1/users';
+  const url = `http://localhost:8080/api/v1/users/login/${loginData.email}/${loginData.password}`;
 
   fetch(url, {
     method: 'GET'
   })
   .then(response => response.json())
-  .then(response => console.log(response));
+  .then(response => {
+    if (response.status === 500) {
+      handleLoginError(response);
+    }
+
+    if (response.status === 200) {
+      handleLoginSuccess(response);
+    }
+  });
+}
+
+const handleLoginError = response => {
+  alert(`Hmm.. Olha só o que deu -> "${response.message}"\n\nMas não se preocupe, vamos te ajudar!\n\nPor favor, clique em OK`);
+
+  const confirmed = confirm('Deixa eu te perguntar, tem certeza que seus dados de acesso estão corretos?\n\nCaso sim, por favor, clique em OK que a gente já continua\n\nAgora se bateu aquela dúvida clique em "Cancelar" para tentar novamente ;)');
+
+  if (confirmed) {
+    alert('Certo. Já avisei a equipe, vamos verificar seu caso e te retornar por e-mail, beleza?\n\nAh, não se preocupa que é rapidinho. Pode ficar numa nice :D');
+  }
+}
+
+const handleLoginSuccess = response => {
+  sessionStorage.setItem('advertise-token', response.body);
+  alert('Dummy text: logado com sucesso!');
 }
