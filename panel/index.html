@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advertise | Painel</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index-min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+      if (!sessionStorage.getItem('advertise-token')) {
+        location.href = '../login';
+      }
+    </script>
+  </head>
+  <body>
+
+    <header>
+      <div class="header-in">
+        <h1>Advertise</h1>
+
+        <div>
+          <nav>
+            <ul>
+              <li>Novo post</li>
+              <li>Notificações</li>
+              <li>Sair</li>
+            </ul>
+          </nav>
+  
+          <button><span class="material-icons md-20">menu</span></button>
+        </div>
+      </div>
+    </header>
+
+    <script src="index.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,50 @@
+@import '../styles/general.css';
+
+header {
+  height: 75px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
+.header-in {
+  width: 1000px;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.header-in > div {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 0 5px 0 20px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+li:hover {
+  color: #eee;
+}
+
+.header-in > div > button {
+  border: none;
+  color: #fff;
+  background: none;
+  cursor: pointer;
+  display: none;
+  margin-right: 10px;
+}
+
+.material-icons.md-20 {
+  font-size: 40px;
+}

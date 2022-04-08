@@ -56,5 +56,5 @@ const handleLoginError = response => {
 
 const handleLoginSuccess = response => {
   sessionStorage.setItem('advertise-token', response.body);
-  alert('Dummy text: logado com sucesso!');
+  location.href = '../panel';
 }

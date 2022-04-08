@@ -1,0 +1,15 @@
+@media all and (max-width: 600px) {
+
+  .header-in > h1 {
+    margin-left: 20px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .header-in > div > button {
+    display: flex;
+  }
+
+}
