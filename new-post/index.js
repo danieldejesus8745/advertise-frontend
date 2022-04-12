@@ -1,4 +1,8 @@
+import { validateToken } from '../js/commom.js';
+
 const form = document.querySelector('#form');
+
+validateToken('../login');
 
 form.addEventListener('submit', e => {
   e.preventDefault();

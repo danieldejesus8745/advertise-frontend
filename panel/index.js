@@ -1,7 +1,11 @@
+import { validateToken } from '../js/commom.js';
+
 const logout = document.querySelector('#logout');
 const newPost = document.querySelector('#new-post');
 const btnMenuMobile = document.querySelector('#btn-menu-mobile');
 const menuMobile = document.querySelector('#menu-mobile');
+
+validateToken('../login');
 
 logout.addEventListener('click', () => {
   const confirmed = confirm('Tem certeza que deseja sair?\n\nClique em OK para SIM ou clique em "Cancelar"');
