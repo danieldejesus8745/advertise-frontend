@@ -4,7 +4,7 @@
     margin-left: 20px;
   }
 
-  nav {
+  .header-in > div > nav {
     display: none;
   }
 
@@ -12,4 +12,35 @@
     display: flex;
   }
 
+  .menu-mobile-expanded > nav > ul {
+    padding: 20px 0 20px 0;
+    animation: ulExpand .3s;
+  }
+
+  .menu-mobile-expanded > nav > ul > li {
+    padding: 10px;
+    display: flex;
+    animation: liExpand .3s;
+  }
+
+}
+
+@keyframes ulExpand {
+  from {
+    padding: 0 0 0 0;
+  }
+
+  to {
+    padding: 20px 0 20px 0;
+  }
+}
+
+@keyframes liExpand {
+  from {
+    padding: 0;
+  }
+
+  to {
+    padding: 10px;
+  }
 }

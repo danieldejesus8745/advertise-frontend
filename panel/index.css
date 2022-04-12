@@ -5,6 +5,10 @@ header {
   background-color: var(--primary-color);
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .header-in {
@@ -47,4 +51,26 @@ li:hover {
 
 .material-icons.md-20 {
   font-size: 40px;
+}
+
+.menu-mobile {
+  width: 100%;
+  position: absolute;
+  top: 75px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu-mobile > nav > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-mobile > nav > ul > li {
+  display: none;
+  color: #fff;
+}
+
+.menu-mobile > nav > ul > li:hover {
+  color: #eee;
 }
