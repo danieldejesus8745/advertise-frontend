@@ -17,3 +17,11 @@ const handleValidateTokenResponse = (response, pathToRedirect) => {
     location.href = pathToRedirect;
   }
 }
+
+export const thereIsTokenSaved = () => {
+  if (sessionStorage.getItem('advertise-token')) {
+    return true;
+  }
+
+  return false;
+}

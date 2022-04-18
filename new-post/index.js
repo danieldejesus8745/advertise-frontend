@@ -1,4 +1,4 @@
-import { validateToken } from '../js/commom.js';
+import { validateToken, thereIsTokenSaved } from '../js/commom.js';
 
 const form = document.querySelector('#form');
 
@@ -15,5 +15,22 @@ form.addEventListener('submit', e => {
 });
 
 const sendPost = post => {
-  console.log(post);
+  if (thereIsTokenSaved()) {
+    const url = `http://localhost:8080/api/v1/posts`;
+    const token = sessionStorage.getItem('advertise-token');
+
+    fetch(url, {
+      headers: {
+        'Authorization': token,
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify(post)
+    })
+    .then(response => response.json())
+    .then(response => console.log(response));
+  } else {
+    alert('Token não encontrado')
+    location.href = '../login';
+  }  
 }
